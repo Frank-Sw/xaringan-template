@@ -5,7 +5,7 @@ author:
     - "Lachlan Deer (Zurich)"
     - "Jon Snow (House Stark)"
     - "Daenerys Targaryen (House Targaryen)" 
-date:  "`r format(Sys.time(), '%d %B, %Y')`"
+date:  "*`r format(Sys.time(), '%d %B, %Y')`*"
 output:
   xaringan::moon_reader:
     lib_dir: libs
