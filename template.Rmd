@@ -1,8 +1,11 @@
 ---
-title: "Presentation Ninja"
-subtitle: "⚔<br/>with xaringan"
-author: "Yihui Xie"
-date: "2016/12/12"
+title: "Catchy Presentation title"
+subtitle: "With a Subtitle"
+author: 
+    - "Lachlan Deer"
+    - "Jon Snow"
+    - "Daenerys Targaryen"
+date:  "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -11,13 +14,6 @@ output:
       highlightLines: true
       countIncrementalSlides: false
     css: [default, lagonbleu.css, metropolis-fonts]
----
-class: center, middle
-
-# xaringan
-
-### /ʃæ.'riŋ.ɡæn/
-
 ---
 class: inverse, center, middle
 
@@ -137,7 +133,7 @@ output:
 If you want to contribute a theme to **xaringan**, please read [this blog post](https://yihui.name/en/2017/10/xaringan-themes).
 
 ---
-class: center, middle
+class: inverse, center, middle
 
 # Thanks!
 
