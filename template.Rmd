@@ -2,9 +2,9 @@
 title: "Catchy Presentation title"
 subtitle: "With a Subtitle"
 author: 
-    - "Lachlan Deer"
-    - "Jon Snow"
-    - "Daenerys Targaryen"
+    - "Lachlan Deer (Zurich)"
+    - "Jon Snow (House Stark)"
+    - "Daenerys Targaryen (House Targaryen)" 
 date:  "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   xaringan::moon_reader:
@@ -19,6 +19,9 @@ class: inverse, center, middle
 
 # Get Started
 
+```{r setup, include=FALSE}
+library(icon)
+```
 ---
 
 # Hello World
@@ -133,10 +136,13 @@ output:
 If you want to contribute a theme to **xaringan**, please read [this blog post](https://yihui.name/en/2017/10/xaringan-themes).
 
 ---
-class: inverse, center, middle
+class: inverse, middle
 
 # Thanks!
 
-Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+`r icon::fa("twitter-square", size = 2)` lachlandeer
 
-The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
+`r icon::fa("envelope-square", size = 2)` lachlan.deer@gmail.com
+
+`r icon::fa("github-square", size = 2)` lachlandeer
+
