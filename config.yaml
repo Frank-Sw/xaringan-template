@@ -1,0 +1,8 @@
+ROOT: "."
+src: "src/"
+log: "logs/"
+out: "out/"
+
+src_slides: "src/slides/"
+
+out_slides: "out/slides/"
