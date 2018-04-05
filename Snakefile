@@ -16,7 +16,7 @@ subworkflow slides:
 
 rule all:
     input:
-        slides(config["src_slides"] + "slides.Rmd")
+        slides("../../" + "slides.html")
 
 # --- Packrat Rules --- #
 
