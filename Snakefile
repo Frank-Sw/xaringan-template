@@ -7,9 +7,16 @@ import glob, os
 
 configfile: "config.yaml"
 
+# --- Subworkflows --- #
+subworkflow slides:
+   workdir: config["src_slides"]
+   snakefile: config["src_slides"] + "Snakefile"
+
 # --- Main Build Rules --- #
 
-# To be Done
+rule all:
+    input:
+        slides(config["src_slides"] + "slides.Rmd")
 
 # --- Packrat Rules --- #
 

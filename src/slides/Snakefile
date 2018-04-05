@@ -1,0 +1,29 @@
+# subworkflow - slides
+# Contributors: @lachlandeer
+
+import glob, os
+
+# --- Importing Configuration Files --- #
+
+configfile: "../../" + "config.yaml"
+
+# --- Dictionary --- #
+
+SECTIONS = [
+            "intro",
+            "mathjax",
+            "r-code",
+            "css-info",
+            "thanks"
+            ]
+
+# --- Build Rules ---#
+
+rule bundle_rmds:
+    input:
+        metadata = "slide_config.yaml",
+        section = expand("{iSection}.Rmd",  iSection = SECTIONS)
+    output:
+        "../../" + config["src_slides"] + "slides.Rmd"
+    shell:
+        "touch {output} "
