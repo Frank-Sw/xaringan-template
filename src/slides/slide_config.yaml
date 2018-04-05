@@ -1,10 +1,10 @@
 ---
 title: "Catchy Presentation title"
 subtitle: "With a Subtitle"
-author: 
+author:
     - "Lachlan Deer,  *U Zurich*"
     - "Jon Snow, *House Stark*"
-    - "Daenerys Targaryen, *House Targaryen*" 
+    - "Daenerys Targaryen, *House Targaryen*"
 date:  "*`r format(Sys.time(), '%d %B, %Y')`*"
 output:
   xaringan::moon_reader:
