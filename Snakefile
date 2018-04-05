@@ -20,8 +20,8 @@ rule all:
     output:
         slides = config["PROJ_NAME"] + ".html"
     shell:
-        "mv {input.slide_bld} {output.slides}"
-
+        "mv {input.slide_bld} {output.slides}; \
+        rm -rf slides_files/"
 
 # --- Packrat Rules --- #
 

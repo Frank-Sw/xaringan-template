@@ -7,3 +7,4 @@ libs
 .RData
 logs
 .snakemake
+packrat/lib*/
