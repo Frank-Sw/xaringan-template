@@ -1,3 +1,5 @@
+PROJ_NAME: xaringan-template
+
 ROOT: "."
 src: "src/"
 log: "logs/"

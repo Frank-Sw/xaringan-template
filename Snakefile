@@ -16,7 +16,12 @@ subworkflow slides:
 
 rule all:
     input:
-        slides("../../" + "slides.html")
+        slide_bld = slides("../../" + "slides.html")
+    output:
+        slides = config["PROJ_NAME"] + ".html"
+    shell:
+        "mv {input.slide_bld} {output.slides}"
+
 
 # --- Packrat Rules --- #
 
@@ -47,11 +52,6 @@ rule packrat_restore:
 rule clean_all:
     shell:
         "rm -rf out/ log/ *.pdf *.html"
-
-## clean_output   : delete all built files in project's output and ROOT directory
-rule clean_output:
-    shell:
-        "rm -rf out/ *.pdf *.html"
 
 ## clean_logs     : delete all log files for this project
 rule clean_log:
