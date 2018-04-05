@@ -31,7 +31,7 @@ rule build_slides:
     input:
         slide_rmd = HERE + "slides.Rmd",
         runner = LIB + "knit_xaringan.R",
-        css = HERE + "lagonbleu.css"
+        css = ROOT + "lagonbleu.css"
     output:
         slides = ROOT + "slides.html"
     log:
