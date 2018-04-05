@@ -5,3 +5,5 @@ libs
 .Rproj.user
 .Rhistory
 .RData
+logs
+.snakemake

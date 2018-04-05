@@ -16,24 +16,9 @@ rmd_file = args[1]
 out_file = basename(args[2])
 out_path = dirname(args[2])
 
-# --- Path where we want our pdf to end up --- #
-final_pdf = here::here(out_path, out_file)
-print(final_pdf)
-
 # --- Build file --- #
-## knitr likes to build to its own directory, let's assemble what the
-## name of the output will be
-tmp_pdf = here::here(dirname(rmd_file), out_file)
-
-## knit
-rmarkdown::render(input = rmd_file, output_file = tmp_pdf, quiet=FALSE,
-                  output_format = 'xaringan::moon_reader')
-
-# rmarkdown::render(input = rmd_file, 
-#                   output_dir  = out_path,
-#                   output_file = out_file, 
-#                   output_format = 'xaringan::moon_reader',
-                    # quiet=FALSE)
-
-# --- Move build file --- #
-file.rename(tmp_pdf, final_pdf)
+rmarkdown::render(input = rmd_file,
+                  output_dir  = here::here(),
+                  output_file = out_file,
+                  output_format = 'xaringan::moon_reader',
+                  quiet=FALSE)
