@@ -5,12 +5,12 @@ author:
     - "Lachlan Deer,  *U Zurich*"
     - "Jon Snow, *House Stark*"
     - "Daenerys Targaryen, *House Targaryen*"
-date:  "*`r format(Sys.time(), '%d %B, %Y')`*"
+date: "*`r format(Sys.time(), '%d %B, %Y')`*"
 output:
-  xaringan::moon_reader:
-    lib_dir: libs
-    nature:
-      highlightStyle: github
-      highlightLines: true
-      countIncrementalSlides: false
-    css: [default, lagonbleu.css, metropolis-fonts]
+    xaringan::moon_reader:
+        lib_dir: libs
+        nature:
+            highlightStyle: github
+            highlightLines: true
+            countIncrementalSlides: false
+        css: [default, lagonbleu.css, metropolis-fonts]
