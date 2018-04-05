@@ -45,6 +45,6 @@ rule bundle_rmds:
         metadata = "slide_config.yaml",
         section = expand("{iSection}.Rmd",  iSection = SECTIONS)
     output:
-        temp(HERE + "slides.Rmd")
+        HERE + "slides.Rmd"
     shell:
         "sed -n 'p' {input.metadata} {input.section} > {output} "

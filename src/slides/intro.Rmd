@@ -1,11 +1,8 @@
 ---
 class: inverse, center, middle
-
 # Get Started
 
-```{r setup, include=FALSE}
-library(icon)
-```
+
 ---
 
 # Hello World

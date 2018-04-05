@@ -2,7 +2,7 @@
 title: "Catchy Presentation title"
 subtitle: "With a Subtitle"
 author:
-    - "Lachlan Deer,  *U Zurich*"
+    - "Lachlan Deer, *U Zurich*"
     - "Jon Snow, *House Stark*"
     - "Daenerys Targaryen, *House Targaryen*"
 date: "*`r format(Sys.time(), '%d %B, %Y')`*"
@@ -14,3 +14,4 @@ output:
             highlightLines: true
             countIncrementalSlides: false
         css: [default, lagonbleu.css, metropolis-fonts]
+---
