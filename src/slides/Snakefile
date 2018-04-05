@@ -7,6 +7,14 @@ import glob, os
 
 configfile: "../../" + "config.yaml"
 
+ROOT = "../../"
+HERE = ROOT + config["src_slides"]
+LIB  = ROOT  + config["src_lib"]
+
+# --- Variable Declarations ---- #
+runR = "Rscript --no-save --no-restore --verbose"
+logAll = "2>&1"
+
 # --- Dictionary --- #
 
 SECTIONS = [
@@ -19,11 +27,24 @@ SECTIONS = [
 
 # --- Build Rules ---#
 
+rule build_slides:
+    input:
+        slide_rmd = HERE + "slides.Rmd",
+        runner = LIB + "knit_xaringan.R",
+        css = HERE + "lagonbleu.css"
+    output:
+        slides = ROOT + "slides.html"
+    log:
+        ROOT + config["log"] + "slides.Rout"
+    shell:
+        "{runR} {input.runner} {input.slide_rmd} \
+                    {output.slides} > {log} {logAll}"
+
 rule bundle_rmds:
     input:
         metadata = "slide_config.yaml",
         section = expand("{iSection}.Rmd",  iSection = SECTIONS)
     output:
-        "../../" + config["src_slides"] + "slides.Rmd"
+        temp(HERE + "slides.Rmd")
     shell:
-        "touch {output} "
+        "sed -n 'p' {input.metadata} {input.section} > {output} "
