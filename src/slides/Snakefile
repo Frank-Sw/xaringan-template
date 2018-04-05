@@ -15,15 +15,15 @@ LIB  = ROOT  + config["src_lib"]
 runR = "Rscript --no-save --no-restore --verbose"
 logAll = "2>&1"
 
-# --- Dictionary --- #
-
-SECTIONS = [
-            "intro",
-            "mathjax",
-            "r-code",
-            "css-info",
-            "thanks"
-            ]
+# # --- Dictionary --- #
+#
+# SECTIONS = [
+#             "intro",
+#             "mathjax",
+#             "r-code",
+#             "css-info",
+#             "thanks"
+#             ]
 
 # --- Build Rules ---#
 
@@ -40,11 +40,11 @@ rule build_slides:
         "{runR} {input.runner} {input.slide_rmd} \
                     {output.slides} > {log} {logAll}"
 
-rule bundle_rmds:
-    input:
-        metadata = "slide_config.yaml",
-        section = expand("{iSection}.Rmd",  iSection = SECTIONS)
-    output:
-        HERE + "slides.Rmd"
-    shell:
-        "sed -n 'p' {input.metadata} {input.section} > {output} "
+# rule bundle_rmds:
+#     input:
+#         metadata = "slide_config.yaml",
+#         section = expand("{iSection}.Rmd",  iSection = SECTIONS)
+#     output:
+#         HERE + "slides.Rmd"
+#     shell:
+#         "sed -n 'p' {input.metadata} {input.section} > {output} "
