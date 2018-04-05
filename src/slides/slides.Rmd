@@ -15,7 +15,6 @@ output:
             countIncrementalSlides: false
         css: [default, lagonbleu.css, metropolis-fonts]
 ---
----
 class: inverse, center, middle
 # Get Started
 
