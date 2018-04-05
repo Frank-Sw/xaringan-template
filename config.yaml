@@ -4,5 +4,6 @@ log: "logs/"
 out: "out/"
 
 src_slides: "src/slides/"
+src_lib:    "src/lib/"
 
 out_slides: "out/slides/"
