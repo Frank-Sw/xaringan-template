@@ -13,7 +13,7 @@ output:
             highlightStyle: github
             highlightLines: true
             countIncrementalSlides: false
-        css: [default, lagonbleu.css, metropolis-fonts]
+        css: [default, src/slides/lagonbleu.css, metropolis-fonts]
 ---
 class: inverse, center, middle
 # Get Started
